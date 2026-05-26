@@ -17,16 +17,16 @@ export function FinalCta() {
 
       <Reveal className="mx-auto max-w-[1180px] overflow-hidden rounded-[2.5rem] border border-[#E19D35]/28 bg-white/50 p-7 text-center shadow-[0_34px_95px_rgba(31,31,31,0.08)] backdrop-blur-xl sm:p-12 lg:rounded-[3rem] lg:p-20">
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A86D22]">
-          <span className="mx-3 text-[#E19D35]">â€¢</span>
-          PrÃ³ximo passo
-          <span className="mx-3 text-[#E19D35]">â€¢</span>
+          <span className="mx-3 text-[#E19D35]">•</span>
+          Próximo passo
+          <span className="mx-3 text-[#E19D35]">•</span>
         </p>
         <div className="mx-auto mt-5 h-px w-20 bg-[#E19D35]" />
         <h2 className="mx-auto mt-8 max-w-3xl text-balance font-serif text-[2.55rem] font-medium leading-[1.08] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
-          Pronto para transformar seu planejamento em <span className="text-[#E19D35]">patrimÃ´nio?</span>
+          Pronto para transformar seu planejamento em <span className="text-[#E19D35]">patrimônio?</span>
         </h2>
         <p className="mx-auto mt-7 max-w-2xl text-pretty text-xl leading-8 text-[#1F1F1F]/66">
-          Fale com a Clarice e descubra qual estratÃ©gia de consÃ³rcio faz mais sentido para o seu objetivo.
+          Fale com a Clarice e descubra qual estratégia de consórcio faz mais sentido para o seu objetivo.
         </p>
         <PremiumButton href={brand.whatsappUrl} target="_blank" rel="noreferrer" className="mt-10 min-h-14 px-8">
           <WhatsAppCtaIcon />
