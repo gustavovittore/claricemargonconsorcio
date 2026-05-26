@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f2f0ef;
+  --foreground: #1f1f1f;
+  --gold: #e19d35;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(225, 157, 53, 0.28);
+  color: var(--foreground);
+}
+
+img {
+  max-width: 100%;
+}
+
+.partners-marquee {
+  animation: partners-marquee 42s linear infinite;
+}
+
+.map-route-line,
+.map-route-glow {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  animation: map-route-draw 6.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.map-route-glow {
+  opacity: 0;
+  stroke-opacity: 0.18;
+}
+
+.map-origin-pulse {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-origin-pulse 3.6s ease-out infinite;
+}
+
+@keyframes partners-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes map-route-draw {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.88;
+  }
+
+  56% {
+    stroke-dashoffset: 0;
+    opacity: 0.88;
+  }
+
+  78% {
+    stroke-dashoffset: 0;
+    opacity: 0.5;
+  }
+
+  100% {
+    stroke-dashoffset: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes map-origin-pulse {
+  0% {
+    transform: scale(0.62);
+    opacity: 0;
+  }
+
+  28% {
+    opacity: 0.34;
+  }
+
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .partners-marquee,
+  .map-route-line,
+  .map-route-glow,
+  .map-origin-pulse {
+    animation: none;
+  }
+
+  .map-route-line {
+    stroke-dashoffset: 0;
+    opacity: 0.72;
+  }
+
+  .map-route-glow {
+    stroke-dashoffset: 0;
+    opacity: 0.18;
+  }
 }

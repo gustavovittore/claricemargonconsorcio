@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="objects" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 2200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffce00;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="1100 146.5 1409.81 774.25 2102.57 874.91 1601.28 1363.54 1719.62 2053.5 1100 1727.75 480.38 2053.5 598.72 1363.54 97.43 874.91 790.19 774.25 1100 146.5"/>
+</svg>

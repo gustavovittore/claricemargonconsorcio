@@ -1,0 +1,5 @@
+2026/05/25-18:18:58.385 50a8 Creating DB c:\Users\Gustavo\Desktop\clarice-margon-consorcio\previews\edge-cdp-profile\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/05/25-18:18:58.412 50a8 Reusing MANIFEST c:\Users\Gustavo\Desktop\clarice-margon-consorcio\previews\edge-cdp-profile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/05/25-18:19:00.976 665c Level-0 table #5: started
+2026/05/25-18:19:00.983 665c Level-0 table #5: 682457 bytes OK
+2026/05/25-18:19:00.984 665c Delete type=0 #3
