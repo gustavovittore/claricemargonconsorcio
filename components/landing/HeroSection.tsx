@@ -57,10 +57,10 @@ export function HeroSection() {
         fill
         preload
         sizes="100vw"
-        className="pointer-events-none -z-10 object-cover object-[58%_38%] opacity-100 max-md:object-[51%_0%] md:max-lg:object-[62%_30%]"
+        className="pointer-events-none -z-10 hidden object-cover object-[58%_38%] opacity-100 md:block md:max-lg:object-[62%_30%]"
       />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,#F2F0EF_0%,rgba(242,240,239,0.9)_25%,rgba(242,240,239,0.2)_64%,rgba(242,240,239,0.03)_100%)] max-md:bg-[linear-gradient(180deg,rgba(242,240,239,0.16)_0%,rgba(242,240,239,0.2)_38%,#F2F0EF_100%)] md:max-lg:bg-[linear-gradient(180deg,rgba(242,240,239,0.96)_0%,rgba(242,240,239,0.78)_43%,rgba(242,240,239,0.18)_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-[linear-gradient(180deg,rgba(242,240,239,0),rgba(242,240,239,0.92)_88%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,#F2F0EF_0%,rgba(242,240,239,0.9)_25%,rgba(242,240,239,0.2)_64%,rgba(242,240,239,0.03)_100%)] md:block md:max-lg:bg-[linear-gradient(180deg,rgba(242,240,239,0.96)_0%,rgba(242,240,239,0.78)_43%,rgba(242,240,239,0.18)_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 hidden h-24 bg-[linear-gradient(180deg,rgba(242,240,239,0),rgba(242,240,239,0.92)_88%)] md:block" />
 
       <div
         style={{ width: "calc(100vw - 2rem)" }}
@@ -72,7 +72,18 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="relative min-h-[33.5rem]"
         >
-          <div className="pointer-events-none absolute inset-x-[-1rem] top-[-2.35rem] h-[32.4rem] rounded-b-[3.25rem] bg-[radial-gradient(circle_at_52%_30%,rgba(255,255,255,0.38),rgba(255,255,255,0)_55%)]" />
+          <div className="pointer-events-none absolute inset-x-[-1rem] top-[-2.35rem] z-0 h-[32.4rem] overflow-hidden rounded-b-[3.25rem]">
+            <Image
+              src={assets.heroBackground}
+              alt=""
+              fill
+              preload
+              sizes="(max-width: 767px) 100vw, 1px"
+              className="object-cover object-[51%_0%]"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(242,240,239,0.03)_0%,rgba(242,240,239,0.08)_58%,#F2F0EF_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_30%,rgba(255,255,255,0.32),rgba(255,255,255,0)_55%)]" />
+          </div>
           <Image
             src={assets.heroCutout}
             alt="Clarice Margon, consultora financeira especializada em consórcios"
@@ -118,10 +129,12 @@ export function HeroSection() {
         <motion.h1
           {...reveal}
           transition={{ ...reveal.transition, delay: 0.14 }}
-          className="mt-7 break-words text-pretty font-serif text-[2.45rem] font-medium leading-[1.06] text-[#1F1F1F]"
+          className="mt-7 break-words font-serif text-[1.88rem] font-medium leading-[1.09] text-[#1F1F1F] min-[414px]:text-[1.96rem] min-[430px]:text-[2.05rem]"
         >
-          Invista em consórcio com orientação especialista e transforme planejamento em{" "}
-          <span className="text-[#E19D35]">patrimônio.</span>
+          <span className="block">Invista em consórcio com</span>
+          <span className="block">orientação especialista e</span>
+          <span className="block">transforme planejamento</span>
+          <span className="block">em <span className="text-[#E19D35]">patrimônio.</span></span>
         </motion.h1>
 
         <motion.div
