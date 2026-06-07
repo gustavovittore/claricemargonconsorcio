@@ -10,7 +10,10 @@ export function Navbar() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 sm:px-6">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-[#1F1F1F]/10 bg-[#F2F0EF]/90 px-4 py-3 shadow-[0_18px_55px_rgba(31,31,31,0.08)] backdrop-blur-xl sm:px-5">
+      <nav
+        style={{ width: "calc(100vw - 2rem)" }}
+        className="mx-auto flex max-w-full items-center justify-between rounded-[2.25rem] border border-[#1F1F1F]/10 bg-white px-5 py-4 shadow-[0_18px_55px_rgba(31,31,31,0.08)] backdrop-blur-xl sm:px-6 lg:max-w-6xl lg:rounded-full lg:bg-[#F2F0EF]/90 lg:px-4 lg:py-3 lg:shadow-[0_18px_55px_rgba(31,31,31,0.08)]"
+      >
         <a href="#inicio" className="flex items-center gap-3" aria-label="Ir para o início">
           <Image
             src={assets.logo}
@@ -18,7 +21,7 @@ export function Navbar() {
             width={168}
             height={41}
             loading="eager"
-            className="h-auto w-32 sm:w-40"
+            className="h-auto w-36 sm:w-40 lg:w-40"
           />
         </a>
 
@@ -46,7 +49,7 @@ export function Navbar() {
           aria-label="Abrir menu"
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#1F1F1F]/10 bg-white/60 text-[#1F1F1F] lg:hidden"
+          className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1F1F]/10 bg-white text-[#1F1F1F] shadow-[0_10px_24px_rgba(31,31,31,0.07)] sm:h-14 sm:w-14 lg:hidden"
         >
           <span className="sr-only">Menu</span>
           <span className="flex flex-col gap-1.5">

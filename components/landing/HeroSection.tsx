@@ -48,7 +48,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden bg-[#F2F0EF] px-4 pb-10 pt-32 sm:px-6 sm:pb-14 sm:pt-36 lg:min-h-[930px] lg:px-8 lg:pb-8 lg:pt-40"
+      className="relative isolate overflow-hidden bg-[#F2F0EF] px-4 pb-10 pt-[6.25rem] sm:px-6 sm:pb-14 sm:pt-[6.25rem] md:pt-36 lg:min-h-[930px] lg:px-8 lg:pb-8 lg:pt-40"
     >
       <div className="pointer-events-none absolute inset-0 -z-20 bg-[#F2F0EF]" />
       <Image
@@ -57,12 +57,100 @@ export function HeroSection() {
         fill
         preload
         sizes="100vw"
-        className="pointer-events-none -z-10 object-cover object-[58%_38%] opacity-100 max-lg:object-[62%_30%]"
+        className="pointer-events-none -z-10 object-cover object-[58%_38%] opacity-100 max-md:object-[51%_0%] md:max-lg:object-[62%_30%]"
       />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,#F2F0EF_0%,rgba(242,240,239,0.9)_25%,rgba(242,240,239,0.2)_64%,rgba(242,240,239,0.03)_100%)] max-lg:bg-[linear-gradient(180deg,rgba(242,240,239,0.96)_0%,rgba(242,240,239,0.78)_43%,rgba(242,240,239,0.18)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,#F2F0EF_0%,rgba(242,240,239,0.9)_25%,rgba(242,240,239,0.2)_64%,rgba(242,240,239,0.03)_100%)] max-md:bg-[linear-gradient(180deg,rgba(242,240,239,0.16)_0%,rgba(242,240,239,0.2)_38%,#F2F0EF_100%)] md:max-lg:bg-[linear-gradient(180deg,rgba(242,240,239,0.96)_0%,rgba(242,240,239,0.78)_43%,rgba(242,240,239,0.18)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-24 bg-[linear-gradient(180deg,rgba(242,240,239,0),rgba(242,240,239,0.92)_88%)]" />
 
-      <div className="mx-auto grid max-w-[1250px] gap-8 lg:grid-cols-[0.99fr_1.01fr] lg:items-end">
+      <div
+        style={{ width: "calc(100vw - 2rem)" }}
+        className="relative z-20 mx-auto max-w-[30rem] overflow-hidden md:hidden"
+      >
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
+          animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="relative min-h-[33.5rem]"
+        >
+          <div className="pointer-events-none absolute inset-x-[-1rem] top-[-2.35rem] h-[32.4rem] rounded-b-[3.25rem] bg-[radial-gradient(circle_at_52%_30%,rgba(255,255,255,0.38),rgba(255,255,255,0)_55%)]" />
+          <Image
+            src={assets.heroCutout}
+            alt="Clarice Margon, consultora financeira especializada em consórcios"
+            width={900}
+            height={1280}
+            preload
+            sizes="(max-width: 767px) 92vw, 47vw"
+            className="absolute left-1/2 top-8 z-20 h-auto w-[88vw] max-w-[23.75rem] -translate-x-1/2 object-contain drop-shadow-[0_28px_38px_rgba(31,31,31,0.16)]"
+          />
+
+          <div className="absolute inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-2.5">
+            {floatingCards.map((card) => (
+              <div
+                key={card.title}
+                className="flex min-h-[5.65rem] min-w-0 items-center gap-2 rounded-[1.15rem] border border-[#D8C9B8]/72 bg-white/92 px-2.5 py-3 text-[#1F1F1F] shadow-[0_18px_42px_rgba(31,31,31,0.1)] backdrop-blur-xl"
+              >
+                <span className="grid h-9 w-9 shrink-0 place-items-center">
+                  <Image
+                    src={card.icon}
+                    alt=""
+                    width={38}
+                    height={38}
+                    className="h-8 w-8 object-contain"
+                  />
+                </span>
+                <span className="min-w-0 text-[0.8rem] font-medium leading-[1.28]">
+                  {card.title}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          {...reveal}
+          transition={{ ...reveal.transition, delay: 0.08 }}
+          className="mt-7 inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-[#D8C9B8]/82 bg-white/50 px-3 py-3 text-center text-[0.54rem] font-semibold uppercase tracking-[0.16em] text-[#A86D22] shadow-[0_16px_42px_rgba(31,31,31,0.045)] backdrop-blur-xl"
+        >
+          <span className="h-2 w-2 shrink-0 rounded-full bg-[#E19D35]" />
+          <span className="min-w-0">Consultoria em consórcios no Brasil e exterior</span>
+        </motion.div>
+
+        <motion.h1
+          {...reveal}
+          transition={{ ...reveal.transition, delay: 0.14 }}
+          className="mt-7 break-words text-pretty font-serif text-[2.45rem] font-medium leading-[1.06] text-[#1F1F1F]"
+        >
+          Invista em consórcio com orientação especialista e transforme planejamento em{" "}
+          <span className="text-[#E19D35]">patrimônio.</span>
+        </motion.h1>
+
+        <motion.div
+          {...reveal}
+          transition={{ ...reveal.transition, delay: 0.2 }}
+          className="mt-6 h-px w-16 bg-[#E19D35]"
+        />
+
+        <motion.p
+          {...reveal}
+          transition={{ ...reveal.transition, delay: 0.24 }}
+          className="mt-6 text-pretty text-[1.08rem] font-semibold leading-8 text-[#1F1F1F]/82"
+        >
+          Com a orientação certa, o consórcio pode ser uma forma inteligente de
+          conquistar imóveis, veículos e construir patrimônio com mais estratégia.
+        </motion.p>
+
+        <motion.p
+          {...reveal}
+          transition={{ ...reveal.transition, delay: 0.3 }}
+          className="mt-4 text-pretty text-[1.02rem] leading-7 text-[#1F1F1F]/66"
+        >
+          Clarice Margon é consultora financeira especializada em consórcios,
+          com atendimento personalizado para famílias, empresários e brasileiros
+          que vivem fora do Brasil.
+        </motion.p>
+      </div>
+
+      <div className="mx-auto hidden max-w-[1250px] gap-8 md:grid lg:grid-cols-[0.99fr_1.01fr] lg:items-end">
         <div className="relative z-20 flex min-w-0 flex-col pb-1 lg:min-h-[620px] lg:justify-start lg:pb-20">
           <motion.div
             {...reveal}
@@ -215,7 +303,7 @@ export function HeroSection() {
         initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
         animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
         transition={{ duration: 0.75, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-30 mx-auto -mt-1 grid max-w-[1250px] overflow-hidden rounded-[1.65rem] border border-[#D8C9B8]/76 bg-white/66 shadow-[0_24px_70px_rgba(31,31,31,0.09)] backdrop-blur-2xl sm:grid-cols-2 lg:-mt-8 lg:grid-cols-4"
+        className="relative z-30 mx-auto -mt-1 hidden max-w-[1250px] overflow-hidden rounded-[1.65rem] border border-[#D8C9B8]/76 bg-white/66 shadow-[0_24px_70px_rgba(31,31,31,0.09)] backdrop-blur-2xl md:grid sm:grid-cols-2 lg:-mt-8 lg:grid-cols-4"
       >
         {stats.map((item, index) => (
           <div
