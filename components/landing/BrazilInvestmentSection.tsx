@@ -56,7 +56,7 @@ export function BrazilInvestmentSection() {
                 key={column.text}
                 className="pt-10 first:pt-0 lg:px-16 lg:pt-0 lg:first:pl-0 lg:last:pr-0"
               >
-                <h2 className="max-w-[13ch] font-serif text-[2.45rem] font-medium leading-[1.12] text-[#1F1F1F] sm:text-[3.25rem] lg:text-[3.45rem]">
+                <h2 className="max-w-[13ch] font-serif text-[2.35rem] font-medium leading-[1.08] text-[#1F1F1F] sm:text-[3.25rem] lg:text-[3.45rem]">
                   {column.title}
                 </h2>
                 <div className="mt-7 h-px w-16 bg-[#E19D35]" />

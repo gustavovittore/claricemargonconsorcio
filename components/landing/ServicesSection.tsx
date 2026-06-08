@@ -42,7 +42,7 @@ export function ServicesSection() {
             <span className="h-2 w-2 rounded-full bg-[#E19D35]" />
             Soluções em consórcio
           </p>
-          <h2 className="mt-7 text-balance font-serif text-[2.65rem] font-medium leading-[1.05] text-[#1F1F1F] sm:text-5xl lg:text-[4.25rem]">
+          <h2 className="mt-7 text-balance font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4.25rem]">
             Soluções em consórcio para <span className="text-[#E19D35]">cada objetivo</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-xl leading-8 text-[#1F1F1F]/68">

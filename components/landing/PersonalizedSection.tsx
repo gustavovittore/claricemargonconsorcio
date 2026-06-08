@@ -13,10 +13,23 @@ export function PersonalizedSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A86D22]">
               Atendimento personalizado
             </p>
-            <h2 className="mt-7 max-w-3xl font-serif text-[2.85rem] font-medium leading-[1.06] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
+            <h2 className="mt-7 max-w-3xl font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
               Atendimento personalizado para <span className="text-[#E19D35]">decisões importantes</span>
             </h2>
             <div className="mt-7 h-px w-52 max-w-full bg-[#E19D35]/55" />
+
+            <div className="relative mt-8 min-h-[430px] overflow-hidden rounded-[1.85rem] border border-[#D8C9B8]/70 shadow-[0_24px_70px_rgba(31,31,31,0.08)] lg:hidden">
+              <Image
+                src={assets.about}
+                alt="Clarice Margon em atendimento personalizado"
+                fill
+                loading="eager"
+                sizes="92vw"
+                className="object-cover object-[48%_42%]"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-[linear-gradient(180deg,rgba(242,240,239,0),rgba(242,240,239,0.38))]" />
+            </div>
+
             <p className="mt-7 max-w-2xl text-[1.12rem] leading-8 text-[#1F1F1F]/70">
               Mais do que apresentar planos de consórcio, Clarice acompanha você na escolha de uma estratégia alinhada ao seu objetivo, prazo e realidade financeira.
             </p>
@@ -46,7 +59,7 @@ export function PersonalizedSection() {
 
           </div>
 
-          <div className="relative min-h-[430px] overflow-hidden lg:min-h-full">
+          <div className="relative hidden min-h-[430px] overflow-hidden lg:block lg:min-h-full">
             <Image
               src={assets.about}
               alt="Clarice Margon em atendimento personalizado"

@@ -42,6 +42,28 @@ function CardIcon({ name }: { name: string }) {
   );
 }
 
+function VideoFrame() {
+  return (
+    <div className="relative mx-auto rounded-[3.2rem] bg-[linear-gradient(135deg,#2A2119,#C89442_18%,#141414_32%,#4C3820_66%,#E2B464)] p-[7px] shadow-[0_34px_95px_rgba(31,31,31,0.24)]">
+      <div className="rounded-[2.95rem] bg-[#101010] p-3">
+        <div className="relative overflow-hidden rounded-[2.35rem] border border-white/10 bg-black">
+          <div className="absolute left-1/2 top-4 z-20 h-8 w-32 -translate-x-1/2 rounded-full border border-white/8 bg-[#060606] shadow-[0_8px_22px_rgba(0,0,0,0.28)]">
+            <span className="absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-[#27313A]" />
+          </div>
+          <video
+            className="aspect-[9/16] h-auto w-full bg-black object-cover"
+            controls
+            playsInline
+            preload="metadata"
+          >
+            <source src="/videos/depoimento-junior-pena-eua-01.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function VideoTestimonialsSection() {
   return (
     <section id="depoimento-video" className="relative isolate overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
@@ -55,24 +77,8 @@ export function VideoTestimonialsSection() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(242,240,239,0.7),rgba(255,252,247,0.28)_48%,rgba(242,240,239,0.72))]" />
 
       <div className="mx-auto grid max-w-[1260px] gap-11 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-        <Reveal className="mx-auto w-full max-w-[410px] lg:max-w-[440px]">
-          <div className="relative mx-auto rounded-[3.2rem] bg-[linear-gradient(135deg,#2A2119,#C89442_18%,#141414_32%,#4C3820_66%,#E2B464)] p-[7px] shadow-[0_34px_95px_rgba(31,31,31,0.24)]">
-            <div className="rounded-[2.95rem] bg-[#101010] p-3">
-              <div className="relative overflow-hidden rounded-[2.35rem] border border-white/10 bg-black">
-                <div className="absolute left-1/2 top-4 z-20 h-8 w-32 -translate-x-1/2 rounded-full border border-white/8 bg-[#060606] shadow-[0_8px_22px_rgba(0,0,0,0.28)]">
-                  <span className="absolute right-3 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-[#27313A]" />
-                </div>
-                <video
-                  className="aspect-[9/16] h-auto w-full bg-black object-cover"
-                  controls
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src="/videos/depoimento-junior-pena-eua-01.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </div>
+        <Reveal className="mx-auto hidden w-full max-w-[410px] lg:block lg:max-w-[440px]">
+          <VideoFrame />
         </Reveal>
 
         <Reveal delay={0.06} className="lg:pl-2">
@@ -82,11 +88,16 @@ export function VideoTestimonialsSection() {
             </span>
             Depoimentos em vídeo
           </p>
-          <h2 className="mt-7 max-w-3xl font-serif text-[2.8rem] font-medium leading-[1.04] text-[#1F1F1F] sm:text-5xl lg:text-[4.35rem]">
+          <h2 className="mt-7 max-w-3xl font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4.35rem]">
             <span className="block">Histórias <span className="text-[#E19D35]">reais</span>.</span>
             <span className="block">Depoimentos <span className="text-[#E19D35]">reais</span>.</span>
           </h2>
           <div className="mt-7 h-px w-24 bg-[#E19D35]" />
+
+          <div className="mx-auto mt-8 w-full max-w-[410px] lg:hidden">
+            <VideoFrame />
+          </div>
+
           <p className="mt-7 max-w-3xl text-[1.1rem] leading-8 text-[#1F1F1F]/68">
             O consórcio é uma estratégia inteligente para quem deseja construir patrimônio com planejamento e visão de longo prazo. Veja o depoimento de brasileiros que confiaram na orientação da Clarice Margon para investir no Brasil mesmo morando no exterior.
           </p>

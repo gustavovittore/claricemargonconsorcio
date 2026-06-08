@@ -22,7 +22,7 @@ export function FinalCta() {
           <span className="mx-3 text-[#E19D35]">•</span>
         </p>
         <div className="mx-auto mt-5 h-px w-20 bg-[#E19D35]" />
-        <h2 className="mx-auto mt-8 max-w-3xl text-balance font-serif text-[2.55rem] font-medium leading-[1.08] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
+        <h2 className="mx-auto mt-8 max-w-[22rem] text-balance font-serif text-[2.1rem] font-medium leading-[1.08] text-[#1F1F1F] sm:max-w-3xl sm:text-5xl lg:text-[4rem]">
           Pronto para transformar seu planejamento em <span className="text-[#E19D35]">patrimônio?</span>
         </h2>
         <p className="mx-auto mt-7 max-w-2xl text-pretty text-xl leading-8 text-[#1F1F1F]/66">

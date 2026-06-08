@@ -15,7 +15,7 @@ export function AboutSection() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(242,240,239,0.56),rgba(242,240,239,0.78)_50%,rgba(242,240,239,0.52))]" />
 
       <div className="mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <Reveal className="relative">
+        <Reveal className="relative hidden lg:block">
           <div className="relative rounded-[2rem] border border-[#E19D35]/40 bg-white/42 p-3 shadow-[0_32px_90px_rgba(31,31,31,0.12)] lg:rounded-[2.45rem]">
             <div className="relative aspect-[0.86/1.24] overflow-hidden rounded-[1.55rem] lg:rounded-[2rem]">
               <Image
@@ -33,10 +33,22 @@ export function AboutSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A86D22]">
             Sobre mim
           </p>
-          <h2 className="mt-5 max-w-3xl font-serif text-[3rem] font-medium leading-[1.03] text-[#1F1F1F] sm:text-6xl lg:text-[5rem]">
+          <h2 className="mt-5 max-w-3xl font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-6xl lg:text-[5rem]">
             Conheça Clarice Margon
           </h2>
           <div className="mt-6 h-px w-64 max-w-full bg-[#E19D35]/55" />
+
+          <div className="relative mt-8 rounded-[2rem] border border-[#E19D35]/40 bg-white/42 p-3 shadow-[0_32px_90px_rgba(31,31,31,0.12)] lg:hidden">
+            <div className="relative aspect-[0.86/1.24] overflow-hidden rounded-[1.55rem]">
+              <Image
+                src={assets.aboutPhoto}
+                alt="Clarice Margon, consultora financeira especializada em consórcios"
+                fill
+                sizes="92vw"
+                className="object-cover object-[50%_42%]"
+              />
+            </div>
+          </div>
 
           <div className="mt-8 grid gap-5 text-[1.14rem] leading-8 text-[#1F1F1F]/70">
             <p>

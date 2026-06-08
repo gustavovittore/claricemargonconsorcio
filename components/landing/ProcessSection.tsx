@@ -40,7 +40,7 @@ export function ProcessSection() {
             <span className="h-2 w-2 rounded-full bg-[#E19D35]" />
             Como funciona
           </p>
-          <h2 className="mt-7 font-serif text-[2.65rem] font-medium leading-[1.05] text-[#1F1F1F] sm:text-5xl lg:text-[4.15rem]">
+          <h2 className="mt-7 font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4.15rem]">
             Como funciona o <span className="text-[#E19D35]">consórcio</span>
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-[#E19D35]" />
@@ -50,7 +50,7 @@ export function ProcessSection() {
         </Reveal>
 
         <div className="relative mt-16 lg:mt-20">
-          <div className="absolute left-7 top-0 h-full w-px bg-[#E19D35]/40 lg:left-1/2" />
+          <div className="absolute left-5 top-0 h-full w-px bg-[#E19D35]/40 lg:left-1/2" />
           <div className="grid gap-8 lg:gap-14">
             {processSteps.map((item, index) => {
               const right = index % 2 === 1;
@@ -58,29 +58,29 @@ export function ProcessSection() {
                 <Reveal
                   key={item.step}
                   delay={index * 0.04}
-                  className={`relative grid gap-5 pl-20 lg:grid-cols-2 lg:pl-0 ${
+                  className={`relative grid min-w-0 gap-5 pl-12 lg:grid-cols-2 lg:pl-0 ${
                     right ? "lg:[&>article]:col-start-2" : ""
                   }`}
                 >
-                  <div className="absolute left-7 top-8 z-20 grid h-14 w-14 -translate-x-1/2 place-items-center rounded-full border border-[#E19D35]/45 bg-[#F8F5EF] font-serif text-3xl text-[#D18B2C] shadow-[0_14px_42px_rgba(31,31,31,0.06)] lg:left-1/2 lg:h-16 lg:w-16">
+                  <div className="absolute left-5 top-7 z-20 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full border border-[#E19D35]/45 bg-[#F8F5EF] font-serif text-2xl text-[#D18B2C] shadow-[0_14px_42px_rgba(31,31,31,0.06)] lg:left-1/2 lg:h-16 lg:w-16 lg:text-3xl">
                     {Number(item.step)}
                   </div>
-                  <article className="relative rounded-[1.85rem] border border-[#D8C9B8]/72 bg-white/68 p-6 shadow-[0_24px_76px_rgba(31,31,31,0.06)] backdrop-blur-xl sm:p-8">
+                  <article className="relative min-w-0 rounded-[1.45rem] border border-[#D8C9B8]/72 bg-white/68 p-5 shadow-[0_24px_76px_rgba(31,31,31,0.06)] backdrop-blur-xl sm:rounded-[1.85rem] sm:p-8">
                     <span className={`absolute top-14 hidden h-px w-10 bg-[#E19D35]/55 lg:block ${right ? "right-full" : "left-full"}`} />
-                    <div className="flex items-center gap-5">
-                      <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full border border-[#E19D35]/30 bg-[#E19D35]/8 text-[#E19D35]">
+                    <div className="flex min-w-0 items-start gap-3 sm:items-center sm:gap-5">
+                      <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-[#E19D35]/30 bg-[#E19D35]/8 text-[#E19D35] sm:h-16 sm:w-16">
                         <StepIcon index={index} />
                       </div>
-                      <h3 className="font-serif text-[1.8rem] font-medium leading-tight text-[#1F1F1F]">
+                      <h3 className="min-w-0 break-words font-serif text-[1.45rem] font-medium leading-tight text-[#1F1F1F] sm:text-[1.8rem]">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="mt-6 text-[1.05rem] leading-8 text-[#1F1F1F]/66">{item.text}</p>
+                    <p className="mt-5 text-[1rem] leading-7 text-[#1F1F1F]/66 sm:mt-6 sm:text-[1.05rem] sm:leading-8">{item.text}</p>
                     <ul className="mt-7 grid gap-3 sm:grid-cols-2">
                       {item.points.map((point) => (
-                        <li key={point} className="flex gap-3 text-[0.99rem] leading-7 text-[#1F1F1F]/70">
+                        <li key={point} className="flex min-w-0 gap-3 text-[0.96rem] leading-7 text-[#1F1F1F]/70 sm:text-[0.99rem]">
                           <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#E19D35]" />
-                          <span>{point}</span>
+                          <span className="min-w-0">{point}</span>
                         </li>
                       ))}
                     </ul>

@@ -38,7 +38,7 @@ export function TestimonialsSection() {
             <span className="h-2 w-2 rounded-full bg-[#E19D35]" />
             Depoimentos institucionais
           </p>
-          <h2 className="mt-7 text-balance font-serif text-[2.55rem] font-medium leading-[1.06] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
+          <h2 className="mt-7 text-balance font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
             Histórias reais de quem escolheu <span className="text-[#E19D35]">construir patrimônio</span> com mais estratégia
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-pretty text-xl leading-8 text-[#1F1F1F]/68">

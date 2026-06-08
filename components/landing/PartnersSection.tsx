@@ -23,8 +23,9 @@ export function PartnersSection() {
             Nossos parceiros
             <span className="mx-3 text-[#E19D35]">•</span>
           </p>
-          <h2 className="mt-6 text-balance font-serif text-[2.65rem] font-medium leading-[1.06] text-[#1F1F1F] sm:text-5xl lg:text-[4.2rem]">
-            Parcerias sólidas que geram <span className="text-[#E19D35]">confiança</span>
+          <h2 className="mx-auto mt-6 max-w-[23rem] text-balance font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:max-w-5xl sm:text-5xl lg:text-[4.2rem]">
+            <span className="block sm:inline">Parcerias sólidas</span>{" "}
+            <span className="block sm:inline">que geram <span className="text-[#E19D35]">confiança</span></span>
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-[#E19D35]" />
           <p className="mx-auto mt-7 max-w-3xl text-pretty text-xl leading-8 text-[#1F1F1F]/68">

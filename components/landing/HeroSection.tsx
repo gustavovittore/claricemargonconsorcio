@@ -126,12 +126,12 @@ export function HeroSection() {
         <motion.h1
           {...reveal}
           transition={{ ...reveal.transition, delay: 0.14 }}
-          className="mt-7 break-words font-serif text-[1.88rem] font-medium leading-[1.09] text-[#1F1F1F] min-[414px]:text-[1.96rem] min-[430px]:text-[2.05rem]"
+          className="mt-7 break-words font-serif text-[1.58rem] font-medium leading-[1.08] text-[#1F1F1F] min-[414px]:text-[1.66rem] min-[430px]:text-[1.72rem]"
         >
-          <span className="block">Invista em consórcio com</span>
-          <span className="block">orientação especialista e</span>
-          <span className="block">transforme planejamento</span>
-          <span className="block">em <span className="text-[#E19D35]">patrimônio.</span></span>
+          <span className="block">Invista em consórcio</span>
+          <span className="block">com orientação especialista</span>
+          <span className="block">e transforme planejamento em</span>
+          <span className="block text-[#E19D35]">patrimônio.</span>
         </motion.h1>
 
         <motion.div

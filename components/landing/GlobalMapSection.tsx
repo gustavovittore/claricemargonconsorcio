@@ -22,7 +22,7 @@ export function GlobalMapSection() {
             Atendimento no Brasil e exterior
             <span className="mx-3 text-[#E19D35]">•</span>
           </p>
-          <h2 className="mt-6 text-balance font-serif text-[2.75rem] font-medium leading-[1.04] text-[#1F1F1F] sm:text-5xl lg:text-[4.8rem]">
+          <h2 className="mt-6 text-balance font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4.8rem]">
             Onde você estiver, a Clarice <span className="text-[#E19D35]">atende</span> você
           </h2>
           <div className="mx-auto mt-6 h-px w-20 bg-[#E19D35]" />
@@ -35,17 +35,21 @@ export function GlobalMapSection() {
         </Reveal>
 
         <Reveal className="relative mt-12 overflow-hidden rounded-[2.35rem] border border-[#D8C9B8]/70 bg-white/52 p-2 shadow-[0_30px_90px_rgba(31,31,31,0.07)] backdrop-blur-xl sm:p-4">
-          <div className="relative aspect-[1.5/1] min-h-[280px] overflow-hidden rounded-[1.85rem]">
+          <div
+            className="relative aspect-[1.08/1] min-h-[320px] overflow-hidden rounded-[1.85rem] bg-[#F2F0EF]/70 sm:aspect-[1.5/1]"
+            style={{ minHeight: "320px" }}
+          >
             <Image
               src={assets.globalServiceMapBase}
               alt="Mapa global com base visual de atendimento no Brasil e exterior"
               fill
               loading="eager"
               sizes="(max-width: 768px) 94vw, 1220px"
-              className="object-cover object-center"
+              className="object-contain object-center"
             />
             <svg
               viewBox="0 0 1536 1024"
+              preserveAspectRatio="xMidYMid meet"
               className="pointer-events-none absolute inset-0 h-full w-full"
               aria-hidden="true"
             >
