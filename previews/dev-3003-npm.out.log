@@ -1,0 +1,12 @@
+
+> clarice-margon-consorcio@0.1.0 dev
+> next dev --port 3003
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3003
+- Network:       http://192.168.15.7:3003
+✓ Ready in 1420ms
+Creating turbopack project {
+  dir: 'C:\\Users\\Gustavo\\Desktop\\clarice-margon-consorcio',
+  testMode: true
+}

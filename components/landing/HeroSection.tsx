@@ -29,6 +29,8 @@ const heroBadgeCardWidths = [
   "md:w-[295px] md:min-w-[295px]",
 ];
 
+const heroMobileBackground = "/brand/mobile/hero-background-mobile.png";
+
 const statIcons = [
   "/icons/2/icon-bancos-e-administradoras-parceiras.png",
   "/icons/2/icon.clientes-orientados.png.png",
@@ -62,25 +64,17 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-0 -z-10 hidden bg-[linear-gradient(90deg,#F2F0EF_0%,rgba(242,240,239,0.9)_25%,rgba(242,240,239,0.2)_64%,rgba(242,240,239,0.03)_100%)] md:block md:max-lg:bg-[linear-gradient(180deg,rgba(242,240,239,0.96)_0%,rgba(242,240,239,0.78)_43%,rgba(242,240,239,0.18)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 hidden h-24 bg-[linear-gradient(180deg,rgba(242,240,239,0),rgba(242,240,239,0.92)_88%)] md:block" />
 
-      <div
-        style={{ width: "calc(100vw - 2rem)" }}
-        className="relative z-20 mx-auto max-w-[30rem] overflow-hidden md:hidden"
-      >
+      <div className="relative z-20 -mx-4 md:hidden">
         <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-h-[33.5rem]"
+          className="relative min-h-[33.5rem] w-full overflow-hidden"
         >
-          <div className="pointer-events-none absolute inset-x-[-1rem] top-[-2.35rem] z-0 h-[32.4rem] overflow-hidden rounded-b-[3.25rem]">
-            <Image
-              src={assets.heroBackground}
-              alt=""
-              fill
-              preload
-              sizes="(max-width: 767px) 100vw, 1px"
-              className="object-cover object-[51%_0%]"
-            />
+          <div
+            className="pointer-events-none absolute inset-x-0 top-[-2.35rem] z-0 h-[32.4rem] overflow-hidden rounded-b-[3.25rem] bg-[#F2F0EF] bg-cover bg-top bg-no-repeat"
+            style={{ backgroundImage: `url('${heroMobileBackground}')` }}
+          >
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(242,240,239,0.03)_0%,rgba(242,240,239,0.08)_58%,#F2F0EF_100%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_30%,rgba(255,255,255,0.32),rgba(255,255,255,0)_55%)]" />
           </div>
@@ -94,7 +88,7 @@ export function HeroSection() {
             className="absolute left-1/2 top-8 z-20 h-auto w-[88vw] max-w-[23.75rem] -translate-x-1/2 object-contain drop-shadow-[0_28px_38px_rgba(31,31,31,0.16)]"
           />
 
-          <div className="absolute inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-2.5">
+          <div className="absolute inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-2.5 px-4">
             {floatingCards.map((card) => (
               <div
                 key={card.title}
@@ -117,6 +111,7 @@ export function HeroSection() {
           </div>
         </motion.div>
 
+        <div className="mx-auto w-[calc(100vw-2rem)] max-w-[30rem]">
         <motion.div
           {...reveal}
           transition={{ ...reveal.transition, delay: 0.08 }}
@@ -161,6 +156,7 @@ export function HeroSection() {
           com atendimento personalizado para famílias, empresários e brasileiros
           que vivem fora do Brasil.
         </motion.p>
+        </div>
       </div>
 
       <div className="mx-auto hidden max-w-[1250px] gap-8 md:grid lg:grid-cols-[0.99fr_1.01fr] lg:items-end">
