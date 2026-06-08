@@ -51,7 +51,17 @@ img {
 
 .map-route-glow {
   opacity: 0;
+  stroke-width: 6px;
   stroke-opacity: 0.18;
+}
+
+.map-route-line {
+  stroke-width: 2.4px;
+}
+
+.global-map-canvas {
+  height: 310px;
+  width: 465px;
 }
 
 .map-origin-pulse {
@@ -59,6 +69,38 @@ img {
   transform-box: fill-box;
   transform-origin: center;
   animation: map-origin-pulse 3.6s ease-out infinite;
+}
+
+@media (min-width: 414px) {
+  .global-map-canvas {
+    height: 330px;
+    width: 495px;
+  }
+}
+
+@media (min-width: 430px) {
+  .global-map-canvas {
+    height: 342px;
+    width: 513px;
+  }
+}
+
+@media (min-width: 640px) {
+  .global-map-canvas {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .map-route-glow {
+    stroke-width: 7px;
+    stroke-opacity: 0.24;
+  }
+
+  .map-route-line {
+    stroke-width: 3.1px;
+  }
 }
 
 @keyframes partners-marquee {

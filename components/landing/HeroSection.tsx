@@ -130,8 +130,8 @@ export function HeroSection() {
         >
           <span className="block">Invista em consórcio</span>
           <span className="block">com orientação especialista</span>
-          <span className="block">e transforme planejamento em</span>
-          <span className="block text-[#E19D35]">patrimônio.</span>
+          <span className="block">e transforme planejamento</span>
+          <span className="block">em <span className="text-[#E19D35]">patrimônio.</span></span>
         </motion.h1>
 
         <motion.div

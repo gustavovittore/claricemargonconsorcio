@@ -38,8 +38,11 @@ export function TestimonialsSection() {
             <span className="h-2 w-2 rounded-full bg-[#E19D35]" />
             Depoimentos institucionais
           </p>
-          <h2 className="mt-7 text-balance font-serif text-[2.35rem] font-medium leading-[1.07] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
-            Histórias reais de quem escolheu <span className="text-[#E19D35]">construir patrimônio</span> com mais estratégia
+          <h2 className="mt-7 text-balance font-serif text-[2.05rem] font-medium leading-[1.08] text-[#1F1F1F] sm:text-5xl lg:text-[4rem]">
+            <span className="block sm:inline">Histórias reais de</span>{" "}
+            <span className="block sm:inline">quem escolheu</span>{" "}
+            <span className="block sm:inline"><span className="text-[#E19D35]">construir patrimônio</span></span>{" "}
+            <span className="block sm:inline">com mais estratégia</span>
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-pretty text-xl leading-8 text-[#1F1F1F]/68">
             Relatos e experiências de clientes atendidos através da estrutura e consultoria do Grupo Vix Invest.

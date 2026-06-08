@@ -34,64 +34,64 @@ export function GlobalMapSection() {
           </p>
         </Reveal>
 
-        <Reveal className="relative mt-12 overflow-hidden rounded-[2.35rem] border border-[#D8C9B8]/70 bg-white/52 p-2 shadow-[0_30px_90px_rgba(31,31,31,0.07)] backdrop-blur-xl sm:p-4">
+        <Reveal className="relative mt-9 overflow-hidden rounded-[2.35rem] border border-[#D8C9B8]/70 bg-white/52 p-2 shadow-[0_30px_90px_rgba(31,31,31,0.07)] backdrop-blur-xl sm:mt-12 sm:p-4">
           <div
-            className="relative aspect-[1.08/1] min-h-[320px] overflow-hidden rounded-[1.85rem] bg-[#F2F0EF]/70 sm:aspect-[1.5/1]"
-            style={{ minHeight: "320px" }}
+            className="relative aspect-[1.12/1] min-h-[300px] overflow-hidden rounded-[1.85rem] bg-[#F2F0EF]/70 sm:aspect-[1.5/1]"
+            style={{ minHeight: "300px" }}
           >
-            <Image
-              src={assets.globalServiceMapBase}
-              alt="Mapa global com base visual de atendimento no Brasil e exterior"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 94vw, 1220px"
-              className="object-contain object-center"
-            />
-            <svg
-              viewBox="0 0 1536 1024"
-              preserveAspectRatio="xMidYMid meet"
-              className="pointer-events-none absolute inset-0 h-full w-full"
-              aria-hidden="true"
-            >
-              <defs>
-                <filter id="routeGlow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="3" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <circle className="map-origin-pulse" cx="605" cy="705" r="42" fill="none" stroke="#E19D35" strokeWidth="1.1" />
-              <circle cx="605" cy="705" r="19" fill="#F8F1E7" stroke="#E19D35" strokeWidth="5" />
-              <circle cx="605" cy="705" r="10" fill="#E19D35" stroke="#F2F0EF" strokeWidth="4" />
-              {routes.map((route) => (
-                <g key={route.name}>
-                  <path
-                    d={route.d}
-                    className="map-route-glow"
-                    pathLength="1"
-                    style={{ animationDelay: route.delay }}
-                    fill="none"
-                    stroke="#E19D35"
-                    strokeLinecap="round"
-                    strokeWidth="6"
-                    filter="url(#routeGlow)"
-                  />
-                  <path
-                    d={route.d}
-                    className="map-route-line"
-                    pathLength="1"
-                    style={{ animationDelay: route.delay }}
-                    fill="none"
-                    stroke="#D89324"
-                    strokeLinecap="round"
-                    strokeWidth="2.4"
-                  />
-                  <circle cx={route.x} cy={route.y} r="8" fill="#E19D35" stroke="#F2F0EF" strokeWidth="4" />
-                </g>
-              ))}
-            </svg>
+            <div className="global-map-canvas absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[49%] sm:inset-0 sm:translate-x-0 sm:translate-y-0">
+              <Image
+                src={assets.globalServiceMapBase}
+                alt="Mapa global com base visual de atendimento no Brasil e exterior"
+                fill
+                loading="eager"
+                sizes="(max-width: 768px) 150vw, 1220px"
+                className="object-cover object-center sm:object-contain"
+              />
+              <svg
+                viewBox="0 0 1536 1024"
+                preserveAspectRatio="xMidYMid meet"
+                className="pointer-events-none absolute inset-0 h-full w-full"
+                aria-hidden="true"
+              >
+                <defs>
+                  <filter id="routeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <circle className="map-origin-pulse" cx="605" cy="705" r="42" fill="none" stroke="#E19D35" strokeWidth="1.1" />
+                <circle cx="605" cy="705" r="19" fill="#F8F1E7" stroke="#E19D35" strokeWidth="5" />
+                <circle cx="605" cy="705" r="10" fill="#E19D35" stroke="#F2F0EF" strokeWidth="4" />
+                {routes.map((route) => (
+                  <g key={route.name}>
+                    <path
+                      d={route.d}
+                      className="map-route-glow"
+                      pathLength="1"
+                      style={{ animationDelay: route.delay }}
+                      fill="none"
+                      stroke="#E19D35"
+                      strokeLinecap="round"
+                      filter="url(#routeGlow)"
+                    />
+                    <path
+                      d={route.d}
+                      className="map-route-line"
+                      pathLength="1"
+                      style={{ animationDelay: route.delay }}
+                      fill="none"
+                      stroke="#D89324"
+                      strokeLinecap="round"
+                    />
+                    <circle cx={route.x} cy={route.y} r="8" fill="#E19D35" stroke="#F2F0EF" strokeWidth="4" />
+                  </g>
+                ))}
+              </svg>
+            </div>
           </div>
         </Reveal>
 
