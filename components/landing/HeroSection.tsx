@@ -50,7 +50,7 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden bg-[#F2F0EF] px-4 pb-10 pt-[6.25rem] sm:px-6 sm:pb-14 sm:pt-[6.25rem] md:pt-36 lg:min-h-[930px] lg:px-8 lg:pb-8 lg:pt-40"
+      className="relative isolate overflow-hidden bg-[#F2F0EF] px-4 pb-10 pt-0 sm:px-6 sm:pb-14 sm:pt-0 md:pt-36 lg:min-h-[930px] lg:px-8 lg:pb-8 lg:pt-40"
     >
       <div className="pointer-events-none absolute inset-0 -z-20 bg-[#F2F0EF]" />
       <Image
@@ -69,12 +69,13 @@ export function HeroSection() {
           initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-h-[33.5rem] w-full overflow-hidden"
+          className="relative min-h-[39.75rem] w-full overflow-hidden bg-[#F2F0EF] bg-cover bg-top bg-no-repeat"
+          style={{
+            minHeight: "39.75rem",
+            backgroundImage: `url('${heroMobileBackground}')`,
+          }}
         >
-          <div
-            className="pointer-events-none absolute inset-x-0 top-[-2.35rem] z-0 h-[32.4rem] overflow-hidden rounded-b-[3.25rem] bg-[#F2F0EF] bg-cover bg-top bg-no-repeat"
-            style={{ backgroundImage: `url('${heroMobileBackground}')` }}
-          >
+          <div className="pointer-events-none absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(242,240,239,0.03)_0%,rgba(242,240,239,0.08)_58%,#F2F0EF_100%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_52%_30%,rgba(255,255,255,0.32),rgba(255,255,255,0)_55%)]" />
           </div>
@@ -85,7 +86,8 @@ export function HeroSection() {
             height={1280}
             preload
             sizes="(max-width: 767px) 92vw, 47vw"
-            className="absolute left-1/2 top-8 z-20 h-auto w-[88vw] max-w-[23.75rem] -translate-x-1/2 object-contain drop-shadow-[0_28px_38px_rgba(31,31,31,0.16)]"
+            style={{ top: "8rem" }}
+            className="absolute left-1/2 z-20 h-auto w-[88vw] max-w-[23.75rem] -translate-x-1/2 object-contain drop-shadow-[0_28px_38px_rgba(31,31,31,0.16)]"
           />
 
           <div className="absolute inset-x-0 bottom-0 z-30 grid grid-cols-2 gap-2.5 px-4">
@@ -111,7 +113,7 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        <div className="mx-auto w-[calc(100vw-2rem)] max-w-[30rem]">
+        <div style={{ width: "calc(100vw - 2rem)" }} className="mx-auto max-w-[30rem]">
         <motion.div
           {...reveal}
           transition={{ ...reveal.transition, delay: 0.08 }}
